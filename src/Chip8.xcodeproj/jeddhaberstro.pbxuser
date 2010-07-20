@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	256AC3D80F4B6AC300CF3369 /* Chip8AppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 237}}";
+			sepNavSelRange = "{173, 0}";
+			sepNavVisRange = "{0, 315}";
+		};
+	};
+	256AC3D90F4B6AC300CF3369 /* Chip8AppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 260}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 366}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 63EE31FF11F53366003D74DB /* Chip8 */;
+		activeTarget = 8D1107260486CEB800E47090 /* Chip8 */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* Chip8 */,
+		);
+		codeSenseManager = 63EE321411F53378003D74DB /* Code sense */;
+		executables = (
+			63EE31FF11F53366003D74DB /* Chip8 */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 301286414;
+			PBXWorkspaceStateSaveDate = 301286414;
+		};
+		perUserProjectItems = {
+			63EE322211F5373E003D74DB = 63EE322211F5373E003D74DB /* PBXTextBookmark */;
+			63EE322311F5373E003D74DB = 63EE322311F5373E003D74DB /* PBXTextBookmark */;
+			63EE322511F5373E003D74DB = 63EE322511F5373E003D74DB /* PBXTextBookmark */;
+			63EE323011F53CA3003D74DB = 63EE323011F53CA3003D74DB /* PBXTextBookmark */;
+			63EE324311F5410F003D74DB = 63EE324311F5410F003D74DB /* PBXTextBookmark */;
+			63EE324411F5410F003D74DB = 63EE324411F5410F003D74DB /* PBXTextBookmark */;
+			63EE324E11F543EC003D74DB = 63EE324E11F543EC003D74DB /* PBXTextBookmark */;
+			63EE325911F5442E003D74DB /* PBXTextBookmark */ = 63EE325911F5442E003D74DB /* PBXTextBookmark */;
+			63EE325A11F5442E003D74DB /* PBXTextBookmark */ = 63EE325A11F5442E003D74DB /* PBXTextBookmark */;
+			63EE325B11F5442E003D74DB /* PBXTextBookmark */ = 63EE325B11F5442E003D74DB /* PBXTextBookmark */;
+			63EE325F11F54479003D74DB /* PBXTextBookmark */ = 63EE325F11F54479003D74DB /* PBXTextBookmark */;
+			63EE326011F54479003D74DB /* PBXTextBookmark */ = 63EE326011F54479003D74DB /* PBXTextBookmark */;
+			63EE326111F54479003D74DB /* PBXTextBookmark */ = 63EE326111F54479003D74DB /* PBXTextBookmark */;
+			63EE326211F54479003D74DB /* PBXTextBookmark */ = 63EE326211F54479003D74DB /* PBXTextBookmark */;
+			63EE326311F5494D003D74DB /* PBXTextBookmark */ = 63EE326311F5494D003D74DB /* PBXTextBookmark */;
+			63EE326411F5494D003D74DB /* PBXTextBookmark */ = 63EE326411F5494D003D74DB /* PBXTextBookmark */;
+			63EE326511F54959003D74DB /* PBXTextBookmark */ = 63EE326511F54959003D74DB /* PBXTextBookmark */;
+		};
+		sourceControlManager = 63EE321311F53378003D74DB /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	63EE31FF11F53366003D74DB /* Chip8 */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Chip8;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	63EE321311F53378003D74DB /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	63EE321411F53378003D74DB /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	63EE321511F53424003D74DB /* Chip8Memory.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 260}}";
+			sepNavSelRange = "{246, 0}";
+			sepNavVisRange = "{3, 350}";
+		};
+	};
+	63EE321611F53424003D74DB /* Chip8Memory.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 364}}";
+			sepNavSelRange = "{217, 0}";
+			sepNavVisRange = "{143, 347}";
+		};
+	};
+	63EE321911F536AA003D74DB /* Chip8Processor.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {519, 663}}";
+			sepNavSelRange = "{1011, 45}";
+			sepNavVisRange = "{695, 454}";
+		};
+	};
+	63EE321A11F536AA003D74DB /* Chip8Processor.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {523, 1807}}";
+			sepNavSelRange = "{192, 0}";
+			sepNavVisRange = "{1927, 297}";
+		};
+	};
+	63EE322211F5373E003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* Chip8AppDelegate.m */;
+		name = "Chip8AppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 366;
+		vrLoc = 0;
+	};
+	63EE322311F5373E003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D80F4B6AC300CF3369 /* Chip8AppDelegate.h */;
+		name = "Chip8AppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 173;
+		rType = 0;
+		vrLen = 315;
+		vrLoc = 0;
+	};
+	63EE322511F5373E003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63EE321611F53424003D74DB /* Chip8Memory.m */;
+		name = "Chip8Memory.m: 17";
+		rLen = 28;
+		rLoc = 301;
+		rType = 0;
+		vrLen = 343;
+		vrLoc = 139;
+	};
+	63EE323011F53CA3003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63EE321511F53424003D74DB /* Chip8Memory.h */;
+		name = "Chip8Memory.h: 15";
+		rLen = 0;
+		rLoc = 251;
+		rType = 0;
+		vrLen = 350;
+		vrLoc = 3;
+	};
+	63EE324311F5410F003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63EE321911F536AA003D74DB /* Chip8Processor.h */;
+		name = "Chip8Processor.h: 45";
+		rLen = 45;
+		rLoc = 1011;
+		rType = 0;
+		vrLen = 520;
+		vrLoc = 624;
+	};
+	63EE324411F5410F003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63EE321A11F536AA003D74DB /* Chip8Processor.m */;
+		name = "Chip8Processor.m: 19";
+		rLen = 0;
+		rLoc = 297;
+		rType = 0;
+		vrLen = 326;
+		vrLoc = 3;
+	};
+	63EE324E11F543EC003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63EE321A11F536AA003D74DB /* Chip8Processor.m */;
+		name = "Chip8Processor.m: 11";
+		rLen = 0;
+		rLoc = 192;
+		rType = 0;
+		vrLen = 329;
+		vrLoc = 0;
+	};
+	63EE325911F5442E003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63EE321A11F536AA003D74DB /* Chip8Processor.m */;
+		name = "Chip8Processor.m: 11";
+		rLen = 0;
+		rLoc = 192;
+		rType = 0;
+		vrLen = 328;
+		vrLoc = 0;
+	};
+	63EE325A11F5442E003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D80F4B6AC300CF3369 /* Chip8AppDelegate.h */;
+		name = "Chip8AppDelegate.h: 11";
+		rLen = 0;
+		rLoc = 173;
+		rType = 0;
+		vrLen = 315;
+		vrLoc = 0;
+	};
+	63EE325B11F5442E003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63EE321511F53424003D74DB /* Chip8Memory.h */;
+		name = "Chip8Memory.h: 12";
+		rLen = 0;
+		rLoc = 187;
+		rType = 0;
+		vrLen = 353;
+		vrLoc = 0;
+	};
+	63EE325F11F54479003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63EE321511F53424003D74DB /* Chip8Memory.h */;
+		name = "Chip8Memory.h: 13";
+		rLen = 0;
+		rLoc = 246;
+		rType = 0;
+		vrLen = 350;
+		vrLoc = 3;
+	};
+	63EE326011F54479003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63EE321611F53424003D74DB /* Chip8Memory.m */;
+		name = "Chip8Memory.m: 22";
+		rLen = 0;
+		rLoc = 419;
+		rType = 0;
+		vrLen = 323;
+		vrLoc = 167;
+	};
+	63EE326111F54479003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63EE321911F536AA003D74DB /* Chip8Processor.h */;
+		name = "Chip8Processor.h: 45";
+		rLen = 45;
+		rLoc = 1011;
+		rType = 0;
+		vrLen = 454;
+		vrLoc = 695;
+	};
+	63EE326211F54479003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63EE321A11F536AA003D74DB /* Chip8Processor.m */;
+		name = "Chip8Processor.m: 11";
+		rLen = 0;
+		rLoc = 192;
+		rType = 0;
+		vrLen = 297;
+		vrLoc = 1927;
+	};
+	63EE326311F5494D003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63EE321A11F536AA003D74DB /* Chip8Processor.m */;
+		name = "Chip8Processor.m: 11";
+		rLen = 0;
+		rLoc = 192;
+		rType = 0;
+		vrLen = 297;
+		vrLoc = 1927;
+	};
+	63EE326411F5494D003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63EE321611F53424003D74DB /* Chip8Memory.m */;
+		name = "Chip8Memory.m: 15";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 343;
+		vrLoc = 143;
+	};
+	63EE326511F54959003D74DB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63EE321611F53424003D74DB /* Chip8Memory.m */;
+		name = "Chip8Memory.m: 14";
+		rLen = 0;
+		rLoc = 217;
+		rType = 0;
+		vrLen = 347;
+		vrLoc = 143;
+	};
+	8D1107260486CEB800E47090 /* Chip8 */ = {
+		activeExec = 0;
+		executables = (
+			63EE31FF11F53366003D74DB /* Chip8 */,
+		);
+	};
+}
