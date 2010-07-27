@@ -9,8 +9,14 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* Chip8AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* Chip8AppDelegate.m */; };
+		6348D08611FD61EE0050D0AA /* Chip8Registers.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348D08511FD61EE0050D0AA /* Chip8Registers.m */; };
+		6348D08A11FD631C0050D0AA /* Chip8Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6348D08911FD631C0050D0AA /* Chip8Screen.m */; };
+		6379593B11FE430E000E5392 /* ControlPanelWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6379593A11FE430E000E5392 /* ControlPanelWindowController.m */; };
+		6379596011FE46BC000E5392 /* GameWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6379595F11FE46BC000E5392 /* GameWindowController.m */; };
+		6379596211FE471B000E5392 /* GameWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6379596111FE471B000E5392 /* GameWindow.xib */; };
+		63795AEC11FE6E1A000E5392 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63795AEB11FE6E1A000E5392 /* GameView.m */; };
 		63EE321711F53424003D74DB /* Chip8Memory.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EE321611F53424003D74DB /* Chip8Memory.m */; };
-		63EE321B11F536AA003D74DB /* Chip8Processor.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EE321A11F536AA003D74DB /* Chip8Processor.m */; };
+		63EE321B11F536AA003D74DB /* Chip8.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EE321A11F536AA003D74DB /* Chip8.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -27,10 +33,21 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		6348D08411FD61EE0050D0AA /* Chip8Registers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chip8Registers.h; sourceTree = "<group>"; };
+		6348D08511FD61EE0050D0AA /* Chip8Registers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chip8Registers.m; sourceTree = "<group>"; };
+		6348D08811FD631C0050D0AA /* Chip8Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chip8Screen.h; sourceTree = "<group>"; };
+		6348D08911FD631C0050D0AA /* Chip8Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chip8Screen.m; sourceTree = "<group>"; };
+		6379593911FE430E000E5392 /* ControlPanelWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlPanelWindowController.h; sourceTree = "<group>"; };
+		6379593A11FE430E000E5392 /* ControlPanelWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlPanelWindowController.m; sourceTree = "<group>"; };
+		6379595E11FE46BC000E5392 /* GameWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameWindowController.h; sourceTree = "<group>"; };
+		6379595F11FE46BC000E5392 /* GameWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameWindowController.m; sourceTree = "<group>"; };
+		6379596111FE471B000E5392 /* GameWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameWindow.xib; sourceTree = "<group>"; };
+		63795AEA11FE6E1A000E5392 /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		63795AEB11FE6E1A000E5392 /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
 		63EE321511F53424003D74DB /* Chip8Memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chip8Memory.h; sourceTree = "<group>"; };
 		63EE321611F53424003D74DB /* Chip8Memory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chip8Memory.m; sourceTree = "<group>"; };
-		63EE321911F536AA003D74DB /* Chip8Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chip8Processor.h; sourceTree = "<group>"; };
-		63EE321A11F536AA003D74DB /* Chip8Processor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chip8Processor.m; sourceTree = "<group>"; };
+		63EE321911F536AA003D74DB /* Chip8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chip8.h; sourceTree = "<group>"; };
+		63EE321A11F536AA003D74DB /* Chip8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chip8.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Chip8-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Chip8-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Chip8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chip8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -52,10 +69,20 @@
 			children = (
 				63EE321511F53424003D74DB /* Chip8Memory.h */,
 				63EE321611F53424003D74DB /* Chip8Memory.m */,
+				6348D08411FD61EE0050D0AA /* Chip8Registers.h */,
+				6348D08511FD61EE0050D0AA /* Chip8Registers.m */,
+				63EE321911F536AA003D74DB /* Chip8.h */,
+				63EE321A11F536AA003D74DB /* Chip8.m */,
+				6348D08811FD631C0050D0AA /* Chip8Screen.h */,
+				6348D08911FD631C0050D0AA /* Chip8Screen.m */,
 				256AC3D80F4B6AC300CF3369 /* Chip8AppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* Chip8AppDelegate.m */,
-				63EE321911F536AA003D74DB /* Chip8Processor.h */,
-				63EE321A11F536AA003D74DB /* Chip8Processor.m */,
+				6379593911FE430E000E5392 /* ControlPanelWindowController.h */,
+				6379593A11FE430E000E5392 /* ControlPanelWindowController.m */,
+				6379595E11FE46BC000E5392 /* GameWindowController.h */,
+				6379595F11FE46BC000E5392 /* GameWindowController.m */,
+				63795AEA11FE6E1A000E5392 /* GameView.h */,
+				63795AEB11FE6E1A000E5392 /* GameView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -113,6 +140,7 @@
 				8D1107310486CEB800E47090 /* Chip8-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				6379596111FE471B000E5392 /* GameWindow.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -171,6 +199,7 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				6379596211FE471B000E5392 /* GameWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +213,12 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* Chip8AppDelegate.m in Sources */,
 				63EE321711F53424003D74DB /* Chip8Memory.m in Sources */,
-				63EE321B11F536AA003D74DB /* Chip8Processor.m in Sources */,
+				63EE321B11F536AA003D74DB /* Chip8.m in Sources */,
+				6348D08611FD61EE0050D0AA /* Chip8Registers.m in Sources */,
+				6348D08A11FD631C0050D0AA /* Chip8Screen.m in Sources */,
+				6379593B11FE430E000E5392 /* ControlPanelWindowController.m in Sources */,
+				6379596011FE46BC000E5392 /* GameWindowController.m in Sources */,
+				63795AEC11FE6E1A000E5392 /* GameView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

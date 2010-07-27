@@ -3,7 +3,6 @@
 //  Chip8
 //
 //  Created by Jedd Haberstro on 19/07/2010.
-//  Copyright 2010 DS Media Labs, Inc. All rights reserved.
 //
 
 #import "Chip8Memory.h"
@@ -12,16 +11,31 @@
 
 @implementation Chip8Memory
 
+- (id)init {
+    if ((self = [super init]) != nil) {
+        memory = malloc(sizeof(uint8_t) * 4096);
+    }
+    
+    return self;
+}
+
+- (void)dealloc {
+    free(memory);
+    [super dealloc];
+}
+
 - (void)writeMemory:(uint8_t)data atIndex:(int)index {
     assert(index <= 0xfff);
-    assert(index >= 0x200);
     memory[index] = data;
 }
 
 - (uint8_t)readMemoryAtIndex:(int)index {
     assert(index <= 0xfff);
-    assert(index >= 0x200);
     return memory[index];
+}
+
+- (uint8_t*)memoryData {
+    return &memory[0];
 }
 
 @end

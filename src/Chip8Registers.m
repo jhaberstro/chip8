@@ -1,22 +1,21 @@
 //
-//  Chip8Processor.m
+//  Chip8Registers.m
 //  Chip8
 //
-//  Created by Jedd Haberstro on 19/07/2010.
-//  Copyright 2010 DS Media Labs, Inc. All rights reserved.
+//  Created by Jedd Haberstro on 26/07/2010.
 //
 
-#import "Chip8Processor.h"
-#import <assert.h>
+#import "Chip8Registers.h"
 
-@interface Chip8Processor (PrivateMethods)
+
+@interface Chip8Registers (PrivateMethods)
 
 - (void)soundTimerUpdate;
 - (void)delayTimerUpdate;
 
 @end 
 
-@implementation Chip8Processor
+@implementation Chip8Registers
 
 - (id)init {
     if ((self = [super init]) != nil) {
@@ -43,18 +42,17 @@
 }
 
 - (uint8_t)decrementStackPointer {
-	++SP;
+	--SP;
 	assert(SP < 16);
 	return SP;
 }
-
 
 - (uint16_t)programCounter {
 	return PC;
 }
 
 - (uint16_t)incrementProgramCounter {
-	++PC;
+	PC += 2;
 	return PC;
 }
 
@@ -95,10 +93,10 @@
 	if (value != 0 && soundTimer != nil) {
 		delayRegister = value;
 		delayTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / 60.0)
-							  target:self
-							  selector:@selector(delayTimerUpdate)
-							  userInfo:nil
-							  repeats:YES];
+                                                      target:self
+                                                    selector:@selector(delayTimerUpdate)
+                                                    userInfo:nil
+                                                     repeats:YES];
 	}
 }
 
@@ -106,17 +104,17 @@
 	if (value != 0 && soundTimer != nil) {
 		soundRegister = value;
 		soundTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / 60.0)
-							  target:self
-							  selector:@selector(soundTimerUpdate)
-							  userInfo:nil
-							  repeats:YES];
+                                                      target:self
+                                                    selector:@selector(soundTimerUpdate)
+                                                    userInfo:nil
+                                                     repeats:YES];
 	}
 }
 
 @end
 
 
-@implementation Chip8Processor (PrivateMethods)
+@implementation Chip8Registers (PrivateMethods)
 
 - (void)soundTimerUpdate {
 	--soundRegister;

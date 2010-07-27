@@ -1,15 +1,14 @@
 //
-//  Chip8Processor.h
+//  Chip8Registers.h
 //  Chip8
 //
-//  Created by Jedd Haberstro on 19/07/2010.
-//  Copyright 2010 DS Media Labs, Inc. All rights reserved.
+//  Created by Jedd Haberstro on 26/07/2010.
 //
 
 #import <Cocoa/Cocoa.h>
 
 
-@interface Chip8Processor : NSObject {
+@interface Chip8Registers : NSObject {
     NSTimer* delayTimer;
     NSTimer* soundTimer;
     
