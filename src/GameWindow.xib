@@ -54,7 +54,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSCustomView" id="481886188">
 							<reference key="NSNextResponder" ref="1006"/>
-							<int key="NSvFlags">268</int>
+							<int key="NSvFlags">319</int>
 							<string key="NSFrameSize">{480, 240}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<string key="NSClassName">GameView</string>
