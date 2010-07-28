@@ -15,6 +15,7 @@
     Chip8Registers* registers;
     Chip8Screen* screen;
     NSTimer* loopTimer;
+    BOOL* keys;
 }
 
 - (id)initWithProgramData:(NSData*)program;
@@ -22,5 +23,6 @@
 - (void)run;
 - (void)stop;
 - (Chip8Screen*)screen;
+- (void)setKeys:(BOOL*)newKeys;
 
 @end

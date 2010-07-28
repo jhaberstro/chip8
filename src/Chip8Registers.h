@@ -22,6 +22,7 @@
     uint8_t V[16];
     uint8_t soundRegister;
     uint8_t delayRegister;
+    BOOL soundActivated;
 }
 
 - (id)init;
@@ -33,6 +34,7 @@
 
 - (uint16_t)programCounter;
 - (uint16_t)incrementProgramCounter;
+- (uint16_t)decrementProgramCounter;
 - (void)setProgramCounter:(uint16_t)value;
 
 - (uint16_t)addressRegister;
@@ -45,5 +47,7 @@
 - (uint8_t)soundTimer;
 - (void)activateDelayTimer:(uint8_t)value;
 - (void)activateSoundTimer:(uint8_t)value;
+- (void)soundTimerUpdate;
+- (void)delayTimerUpdate;
 
 @end

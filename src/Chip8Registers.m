@@ -7,19 +7,17 @@
 
 #import "Chip8Registers.h"
 
-
-@interface Chip8Registers (PrivateMethods)
-
-- (void)soundTimerUpdate;
-- (void)delayTimerUpdate;
-
-@end 
-
 @implementation Chip8Registers
 
 - (id)init {
     if ((self = [super init]) != nil) {
         PC = 0x200;
+		memset(stack, 0, sizeof(uint16_t) * 16);
+		memset(V, 0, sizeof(uint8_t) * 16);
+		I = 0;
+		SP = 0;
+		soundRegister = 0;
+		delayRegister = 0;
     }
     
     return self;
@@ -56,6 +54,11 @@
 	return PC;
 }
 
+- (uint16_t)decrementProgramCounter {
+    PC -= 2;
+    return PC;
+}
+
 - (void)setProgramCounter:(uint16_t)value {
 	PC = value;
 }
@@ -90,46 +93,27 @@
 }
 
 - (void)activateDelayTimer:(uint8_t)value {
-	if (value != 0 && soundTimer != nil) {
-		delayRegister = value;
-		delayTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / 60.0)
-                                                      target:self
-                                                    selector:@selector(delayTimerUpdate)
-                                                    userInfo:nil
-                                                     repeats:YES];
-	}
+	delayRegister = value;
 }
 
 - (void)activateSoundTimer:(uint8_t)value {
-	if (value != 0 && soundTimer != nil) {
-		soundRegister = value;
-		soundTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / 60.0)
-                                                      target:self
-                                                    selector:@selector(soundTimerUpdate)
-                                                    userInfo:nil
-                                                     repeats:YES];
-	}
+	soundRegister = value;
+	soundActivated = YES;
 }
 
-@end
-
-
-@implementation Chip8Registers (PrivateMethods)
-
 - (void)soundTimerUpdate {
-	--soundRegister;
-	if (soundRegister == 0) {
+	if (soundRegister > 0) {
+		--soundRegister;
+	}
+	
+	if (soundRegister == 0 && soundActivated) {
 		NSBeep();
-		[soundTimer invalidate];
-		[soundTimer release];
+		soundActivated = NO;
 	}
 }
 - (void)delayTimerUpdate {
-	--delayRegister;
-	if (delayRegister == 0) {
-		// Do anything here?
-		[delayTimer invalidate];
-		[delayTimer release];
+	if (delayRegister > 0) {
+		--delayRegister;
 	}
 }
 

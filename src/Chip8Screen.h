@@ -10,18 +10,19 @@
 
 @interface Chip8Screen : NSObject {
     NSBitmapImageRep* imageRep;
-    NSImage* image;
-}
+    NSColor* clearColor;
+    NSColor* drawColor;
+	NSUInteger pixels[32][64];
+    NSTimer* updateTimer;
+} 
 
 - (id)init;
 - (void)dealloc;
-- (uint8_t*)bitmapData;
-- (size_t)size;
 - (size_t)width;
 - (size_t)height;
-- (uint8_t)setPixel:(uint8_t)value atX:(int)x andY:(int)y;
+- (void)update;
+- (BOOL)setPixelAtX:(int)x andY:(int)y;
 - (void)clear;
-- (NSImage*)image;
 - (NSBitmapImageRep*)imageRep;
 
 @end

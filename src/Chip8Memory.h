@@ -9,11 +9,10 @@
 #import <stdint.h>
 
 @interface Chip8Memory : NSObject {
-    uint8_t* memory;
+    uint8_t memory[4096];
 }
 
 - (id)init;
-- (void)dealloc;
 - (void)writeMemory:(uint8_t)data atIndex:(int)index;
 - (uint8_t)readMemoryAtIndex:(int)index;
 - (uint8_t*)memoryData;

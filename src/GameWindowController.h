@@ -14,11 +14,11 @@
     IBOutlet GameView* view;
     NSTimer* loopTimer;
     Chip8* chip8;
+    BOOL keys[16];
 }
 
 - (id)initWithRomPath:(NSURL*)romPath;
 - (void)dealloc;
-
 - (void)run;
 - (void)stop;
 
