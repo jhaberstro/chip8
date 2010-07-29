@@ -3,7 +3,6 @@
 //  Chip8
 //
 //  Created by Jedd Haberstro on 26/07/2010.
-//  Copyright 2010 DS Media Labs, Inc. All rights reserved.
 //
 
 #import "GameWindowController.h"
@@ -39,12 +38,8 @@ int CharacterToKeyIndex(unichar c) {
 
 - (id)initWithRomPath:(NSURL*)romPath {
     if ((self = [super initWithWindowNibName:@"GameWindow"]) != nil) {
-		NSData* programData = [[NSData alloc] initWithContentsOfURL:romPath];
-        chip8 = [[Chip8 alloc] initWithProgramData:programData];
-		[chip8 setKeys:&keys[0]];
-        [programData release];
-        
-        [self window];
+		[self loadRom:romPath];
+		[self window];
     }
     
     return self;
@@ -61,22 +56,42 @@ int CharacterToKeyIndex(unichar c) {
     [super dealloc];
 }
 
+- (void)loadRom:(NSURL*)romPath {
+	if (chip8 != nil) {
+		[self stop];
+	    [chip8 release];
+	}
+	
+	NSData* programData = [[NSData alloc] initWithContentsOfURL:romPath];
+    chip8 = [[Chip8 alloc] initWithProgramData:programData];
+	[chip8 setKeys:&keys[0]];
+	[view setBitmapImageRep:[[chip8 screen] imageRep]];
+	[view display];
+    [programData release];
+}
+
 - (void)run {
-	loopTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / 60.0)
-                                                 target:self
-                                               selector:@selector(execute)
-                                               userInfo:nil
-                                                repeats:YES];
-	[chip8 run];
+	if (![chip8 isRunning]) {
+		loopTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / 60.0)
+	                                                 target:self
+	                                               selector:@selector(execute)
+	                                               userInfo:nil
+	                                                repeats:YES];
+		[chip8 run];
+	}
 }
 
 - (void)stop {
-	if (loopTimer) {
+	if ([chip8 isRunning]) {
+		[chip8 stop];
 		[loopTimer invalidate];
 		[loopTimer release];
 	}
 	
-	[chip8 stop];
+}
+
+- (BOOL)isEmulatorRunning {
+    return [chip8 isRunning];
 }
 
 - (void)keyDown:(NSEvent*)theEvent {

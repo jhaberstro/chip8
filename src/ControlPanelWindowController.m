@@ -3,7 +3,6 @@
 //  Chip8
 //
 //  Created by Jedd Haberstro on 26/07/2010.
-//  Copyright 2010 DS Media Labs, Inc. All rights reserved.
 //
 
 #import "ControlPanelWindowController.h"
@@ -12,30 +11,34 @@
 @implementation ControlPanelWindowController
 
 - (IBAction)openRom:(id)sender {
-	if (currentGameWindow) {
-		[currentGameWindow release];
-	}
-	
 	NSOpenPanel* openPanel = [NSOpenPanel openPanel];
 	[openPanel setCanChooseFiles:YES];
 	[openPanel setCanChooseDirectories:NO];
 	[openPanel setAllowsMultipleSelection:NO];
 	[openPanel beginWithCompletionHandler: ^ void (NSInteger result) {
         if (result != 0) {
-            currentGameWindow = [[GameWindowController alloc] initWithRomPath:[openPanel URL]];
+			if (currentGameWindow) {
+                [playStopButton setState:NSOffState];
+				[currentGameWindow loadRom:[openPanel URL]];
+			}
+			else {
+				currentGameWindow = [[GameWindowController alloc] initWithRomPath:[openPanel URL]];
+				[self run:nil];
+                [playStopButton setState:NSOnState];
+            }	
         }
 	}];
 }
 
 - (IBAction)run:(id)sender {
-    if (currentGameWindow) {
-		[currentGameWindow run];
-	}
-}
-
-- (IBAction)stop:(id)sender {
-    if (currentGameWindow) {
-		[currentGameWindow stop];
+	if (currentGameWindow != nil) {
+		[[currentGameWindow window] makeKeyAndOrderFront:nil];
+		if (![currentGameWindow isEmulatorRunning]) {
+			[currentGameWindow run];
+		}
+		else {
+			[currentGameWindow stop];
+		}
 	}
 }
 

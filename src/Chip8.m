@@ -19,6 +19,7 @@
 
 - (id)initWithProgramData:(NSData*)program {
 	if ((self = [super init]) != nil) {
+        running = NO;
 		memory = [[Chip8Memory alloc] init];
 		registers = [[Chip8Registers alloc] init];
         screen = [[Chip8Screen alloc] init];
@@ -40,17 +41,22 @@
 }
 
 - (void)run {
-	loopTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / 30.0)
-                                                  target:self
-                                                selector:@selector(execute)
-                                                userInfo:nil
-                                                 repeats:YES];
+    if (!running) {
+        loopTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / 30.0)
+                                                     target:self
+                                                   selector:@selector(execute)
+                                                   userInfo:nil
+                                                    repeats:YES];
+    }
+    
+    running = YES;
 }
 
 - (void)stop {
-	if (loopTimer) {
-		[loopTimer invalidate];
+	if (running) {
+        [loopTimer invalidate];        
 		[loopTimer release];
+        running = NO;
 	}
 }
 
@@ -61,6 +67,10 @@
 - (void)setKeys:(BOOL*)newKeys {
 	assert(newKeys);
 	keys = newKeys;
+}
+
+- (BOOL)isRunning {
+    return running;
 }
 
 @end
